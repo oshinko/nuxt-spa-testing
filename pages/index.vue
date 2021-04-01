@@ -37,10 +37,11 @@ export default {
   async asyncData({ $axios, $config }) {
     console.log('asyncData', $axios)
     const headers = await $axios.$get($config.apiPrefix + '/headers')
+    console.log('headers', headers)
     return { headers }
   },
   created() {
-    console.log('mytag', this.$config.apiPrefix)
+    console.log('this.$config.apiPrefix', this.$config.apiPrefix)
   }
 }
 </script>
